@@ -1,29 +1,32 @@
 import React from 'react';
-import './Contact.css';
+import GradientButton from './GradientButton';
 
 const Contact = () => {
   return (
     <section id="contact" className="section">
       <h2>Get In Touch</h2>
       <div className="contact-content">
-        <p>
+        <p style={{ marginBottom: '2rem' }}>
           I'm always working on my next big project! Whether you have a question
           or want to discuss new opportunities, feel free to contact me!
         </p>
 
-
-        <a href="mailto:khangmanhchung@gmail.com" class="button email-link">
-          Email me!
-          <div class="hoverEffect">
-            <div></div>
-          </div>
-        </a>
+        <div style={{ marginBottom: '3rem' }}>
+          <GradientButton 
+            href="mailto:khangmanhchung@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Email Me!
+          </GradientButton>
+        </div>
         
-        <div className="social-links">
+        <div className="social-links" style={{ gap: '2rem' }}>
           <a
             href="https://github.com/khangchung15"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ padding: '0.5rem 1rem' }}
           >
             GitHub
           </a>
@@ -31,6 +34,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/kgcg/"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ padding: '0.5rem 1rem' }}
           >
             LinkedIn
           </a>
