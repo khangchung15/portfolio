@@ -1,5 +1,5 @@
 import React from 'react';
-import khangImage from '../assets/khangchung.jpg';
+import khangImage from '../public/images/khangchung.jpg';
 
 const About = () => {
   return (
