@@ -86,6 +86,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Projects Section */
 .projects-grid {
   display: grid;
@@ -171,5 +172,9 @@ body {
   .header nav a {
     display: block;
     margin: 0.5rem 0;
+  }
+
+  .about-image img {
+    max-width: 150px;
   }
 }
