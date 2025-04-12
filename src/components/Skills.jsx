@@ -2,9 +2,10 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
-    'HTML/CSS', 'JavaScript', 'React', 'Vite', 'Node.js', 
-    'Git', 'UI/UX', 'Python', 'MySQL', 'PostgreSQL',
-    'Django', 'JSON', 'Java','Aseprite','Pixel Art',
+    'HTML/CSS', 'Java', 'Python', 'C++', 'JavaScript',
+    'R', ,'MySQL', 'Postgresql', 'React', 'Vite', 
+    'Node.js', 'Git', 'UI/UX', 'Python', 'Git',
+    'Django', 'JSON','Aseprite','Pixel Art',
     'Flask', 'Data scraping'
     // Add your skills here
   ];

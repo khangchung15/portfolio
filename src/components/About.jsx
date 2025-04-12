@@ -1,4 +1,5 @@
 import React from 'react';
+import khangImage from '../assets/khangchung.jpg';
 
 const About = () => {
   return (
@@ -15,8 +16,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          {/* Add your image here */}
-          <img src="/path-to-your-image.jpg" alt="Your Name" />
+          <img src={khangImage} alt="Khang Chung" />
         </div>
       </div>
     </section>
