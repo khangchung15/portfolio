@@ -26,7 +26,12 @@ const Projects = () => {
       description: 'New custom items & blocks + Various quality of life features to the Minecraft, built with Java & Minecraft Forge.',
       github: 'https://github.com/khangchung15/minecraftmod'
     },
-    // Add more projects as needed
+    {
+      id: 4,
+      title: 'Personal Portfolio',
+      description: 'This portfolio website you are seeing, built with React.',
+      github: 'https://github.com/khangchung15/portfolio'
+    },
   ];
 
   return (  
