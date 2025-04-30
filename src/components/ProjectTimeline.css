@@ -1,0 +1,65 @@
+.timeline-horizontal-outer {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.timeline-horizontal-line {
+  position: relative;
+  height: 100px;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-year-group {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.timeline-year-bubble {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.timeline-project-bubble {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin: 0.25rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 150px;
+}
+
+.timeline-project-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-project-bubble.hidden {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+/* Add a subtle line connecting the years */
+.timeline-horizontal-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-color);
+  opacity: 0.3;
+} 
