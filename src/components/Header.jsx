@@ -63,9 +63,9 @@ const Header = () => {
       lucky = true; // guarantee after 20
     } else if (clickCount.current >= 10) {
       lucky = Math.random() < 0.2; // 20% chance after 10
-    } else {
-      lucky = Math.random() < 0.05; // 5% chance before 10
-    }
+    } else if (clickCount.current >= 6) {
+      lucky = Math.random() < 0.05; // 5% chance from 6 to 9
+    } // else (clickCount.current < 6) lucky remains false
     animateScramble(false, undefined, false, lucky);
   };
 
