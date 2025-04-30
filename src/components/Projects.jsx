@@ -96,21 +96,17 @@ const Projects = () => {
       }
     };
 
-    // Initialize swiper
     initializeSwiper();
 
-    // Add event listeners
     window.addEventListener('resize', handleResize);
     window.addEventListener('load', initializeSwiper);
 
-    // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('load', initializeSwiper);
     };
   }, []);
 
-  // Debug the image path
   console.log('Image path:', projects[0].image);
 
   return (
@@ -119,7 +115,7 @@ const Projects = () => {
       <div style={{ 
         opacity: isLoading ? 0 : 1, 
         transition: 'opacity 0.3s ease-in-out',
-        minHeight: '730px' // Prevent layout shift
+        minHeight: '730px'
       }}>
         <Swiper
           ref={swiperRef}

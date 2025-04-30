@@ -18,6 +18,10 @@ const techLinks = {
   'Node.js': 'https://nodejs.org/en/docs/',
   'HTML/CSS': 'https://developer.mozilla.org/en-US/docs/Web/HTML/CSS',
   'Pixel Art': 'https://en.wikipedia.org/wiki/Pixel_art',
+  'C++': 'https://devdocs.io/cpp/',
+  'R': 'https://www.r-project.org/about.html',
+  'UI': 'https://en.wikipedia.org/wiki/User_interface_design',
+  'Data scraping': 'https://www.okta.com/identity-101/data-scraping/',
 };
 
 const skills = [
@@ -48,7 +52,8 @@ const skills = [
   {
     icon: '💻',
     title: 'C++',
-    subtitle: 'Systems Programming'
+    subtitle: 'Systems Programming',
+    link: techLinks['C++']
   },
   {
     icon: '🟨',
@@ -59,7 +64,8 @@ const skills = [
   {
     icon: '📊',
     title: 'R',
-    subtitle: 'Statistical Computing'
+    subtitle: 'Statistical Computing',
+    link: techLinks['R']
   },
   {
     icon: '🗄️',
@@ -100,7 +106,8 @@ const skills = [
   {
     icon: '🎨',
     title: 'UI/UX',
-    subtitle: 'Design & Prototyping'
+    subtitle: 'Design & Prototyping',
+    link: techLinks['UI']
   },
   {
     icon: '🌐',
@@ -135,7 +142,8 @@ const skills = [
   {
     icon: '🕸️',
     title: 'Data scraping',
-    subtitle: 'Web Data Extraction'
+    subtitle: 'Web Data Extraction',
+    link: techLinks['Data scraping']
   }
 ];
 

@@ -6,7 +6,6 @@ import KansetsuKi from '../assets/videos/kansetsu-ki.mp4';
 import Nocturnes from '../assets/videos/nocturnes-op9-no2.mp4';
 import Marriage from '../assets/videos/marriage-d-amour.mp4';
 
-
 const uhText = "University of Houston";
 const uhLink = (
   <a
@@ -60,8 +59,7 @@ const pianoPieces = [
     video: Marriage,
     thumbnail: `${process.env.PUBLIC_URL}/images/marriage-thumbnail.jpg`,
     recordImage: 'record1.png' 
-  },
-  
+  }
 ];
 
 const About = () => {
@@ -106,7 +104,7 @@ const About = () => {
   const handleRecordClick = (idx) => {
     setCurrentVideoIndex(idx);
     if (recordSelectorRef.current) {
-      const recordWidth = 116; // width + gap
+      const recordWidth = 116;
       recordSelectorRef.current.scrollTo({
         left: idx * recordWidth,
         behavior: 'smooth'
@@ -255,7 +253,7 @@ const About = () => {
                 onScroll={handleScroll}
                 style={{
                   display: 'flex',
-                  gap: '1rem',
+                  gap: '0.5rem',
                   overflowX: 'auto',
                   padding: '1rem',
                   scrollbarWidth: 'none',
@@ -264,7 +262,11 @@ const About = () => {
                     display: 'none'
                   },
                   scrollBehavior: 'smooth',
-                  WebkitOverflowScrolling: 'touch'
+                  WebkitOverflowScrolling: 'touch',
+                  touchAction: 'pan-x',
+                  width: '100%',
+                  maxWidth: '100vw',
+                  justifyContent: 'center'
                 }}
               >
                 {pianoPieces.map((piece, idx) => (
@@ -279,12 +281,16 @@ const About = () => {
                       flexDirection: 'column',
                       alignItems: 'center',
                       gap: '0.5rem',
-                      flexShrink: 0
+                      flexShrink: 0,
+                      width: '80px',
+                      '@media (min-width: 768px)': {
+                        width: '100px'
+                      }
                     }}
                   >
                     <div style={{
-                      width: '100px',
-                      height: '100px',
+                      width: '100%',
+                      aspectRatio: '1',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
@@ -305,12 +311,15 @@ const About = () => {
                       />
                     </div>
                     <div style={{ 
-                      fontSize: '0.8rem',
+                      fontSize: '0.7rem',
                       textAlign: 'center',
-                      maxWidth: '100px',
+                      maxWidth: '100%',
                       overflow: 'hidden',
                       textOverflow: 'ellipsis',
-                      whiteSpace: 'nowrap'
+                      whiteSpace: 'nowrap',
+                      '@media (min-width: 768px)': {
+                        fontSize: '0.8rem'
+                      }
                     }}>
                       {piece.name}
                     </div>
