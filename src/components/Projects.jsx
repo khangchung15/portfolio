@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import './Projects.css';
 import GradientButton from './GradientButton';
 import coogZooImage from '../assets/images/projects/coog-zoo.png';
@@ -21,7 +26,7 @@ const techLinks = {
   'JSON': 'https://www.json.org/json-en.html',
   'Java': 'https://docs.oracle.com/en/java/',
   'Minecraft Forge API': 'https://docs.minecraftforge.net/',
-  'Aseprite': 'https://store.steampowered.com/app/431730/Aseprite/',
+  'Aseprite': 'https://www.aseprite.org/',
   'IntelliJ': 'https://www.jetbrains.com/help/idea/',
   'Flask': 'https://flask.palletsprojects.com/',
   'BeautifulSoup': 'https://www.crummy.com/software/BeautifulSoup/bs4/doc/',
@@ -74,72 +79,126 @@ const Projects = () => {
     }
   ];
 
+  const swiperRef = useRef();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const initializeSwiper = () => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.update();
+        setIsLoading(false);
+      }
+    };
+
+    const handleResize = () => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.update();
+      }
+    };
+
+    // Initialize swiper
+    initializeSwiper();
+
+    // Add event listeners
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', initializeSwiper);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', initializeSwiper);
+    };
+  }, []);
+
   // Debug the image path
   console.log('Image path:', projects[0].image);
-
-  const scrollToTimeline = () => {
-    const timelineSection = document.getElementById('timeline');
-    if (timelineSection) {
-      timelineSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="projects" className="section">
       <h2>My Projects</h2>
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <div className="project-image">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                onError={(e) => {
-                  console.error('Error loading image:', e.target.src);
-                  e.target.style.display = 'none';
-                }}
-              />
-            </div>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="tech-used">
-              {project.technologies.map((tech, techIndex) => (
-                <a
-                  key={techIndex}
-                  href={techLinks[tech]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tech-badge"
-                >
-                  {tech}
-                </a>
-              ))}
-            </div>
-            <div className="project-links">
-              <GradientButton 
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </GradientButton>
-              {project.demo && (
-                <GradientButton 
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </GradientButton>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
-        <GradientButton onClick={scrollToTimeline}>
-          View Project Timeline
-        </GradientButton>
+      <div style={{ 
+        opacity: isLoading ? 0 : 1, 
+        transition: 'opacity 0.3s ease-in-out',
+        minHeight: '730px' // Prevent layout shift
+      }}>
+        <Swiper
+          ref={swiperRef}
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={'auto'}
+          loop={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{ clickable: true }}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="mySwiper"
+          style={{ paddingBottom: '3rem' }}
+          observer={true}
+          observeParents={true}
+          onInit={() => setIsLoading(false)}
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <div className="project-card">
+                <div className="project-image">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    loading="eager"
+                    onError={(e) => {
+                      console.error(`Failed to load image for ${project.title}:`, e);
+                      e.target.src = `${process.env.PUBLIC_URL}/images/fallback-project.png`;
+                    }}
+                  />
+                </div>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tech-used">
+                  {project.technologies.map((tech, techIndex) => (
+                    <a
+                      key={techIndex}
+                      href={techLinks[tech]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tech-badge"
+                    >
+                      {tech}
+                    </a>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <GradientButton 
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </GradientButton>
+                  {project.demo && (
+                    <GradientButton 
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </GradientButton>
+                  )}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
