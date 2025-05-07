@@ -11,6 +11,7 @@ import volunteerMatchingImage from '../assets/images/projects/volunteer-matching
 import wattWatchImage from '../assets/images/projects/watt-watch.png';
 import minecraftModImage from '../assets/images/projects/minecraft-mod.png';
 import portfolioImage from '../assets/images/projects/portfolio.png';
+import recaptchaGameImage from '../assets/images/projects/recaptcha-game.png';
 
 const techLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -76,6 +77,14 @@ const Projects = () => {
       github: 'https://github.com/khangchung15/portfolio',
       demo: null,
       image: portfolioImage
+    },
+    {
+      title: 'ReCaptcha Game',
+      description: 'A parody game of ReCaptcha, available to play on GitHub Pages, built with React.',
+      technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages','Swiper.js', 'Jest'],
+      github: 'https://github.com/khangchung15/portfolio',
+      demo: 'https://khangchung15.github.io/recaptcha-game/',
+      image: recaptchaGameImage
     }
   ];
 
@@ -187,7 +196,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Live Demo
+                      Try it out!
                     </GradientButton>
                   )}
                 </div>
