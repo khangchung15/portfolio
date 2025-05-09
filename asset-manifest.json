@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.39cb1004.css",
-    "main.js": "/portfolio/static/js/main.a0203271.js",
+    "main.css": "/portfolio/static/css/main.4518ff4c.css",
+    "main.js": "/portfolio/static/js/main.de80c574.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/moonlight-sonata.mp4": "/portfolio/static/media/moonlight-sonata.edeed13a8297ce16a39e.mp4",
     "static/media/marriage-d-amour.mp4": "/portfolio/static/media/marriage-d-amour.88012eee248379700db0.mp4",
@@ -11,16 +11,17 @@
     "static/media/minecraft-mod.png": "/portfolio/static/media/minecraft-mod.e60a4b561cfe7fe652d1.png",
     "static/media/portfolio.png": "/portfolio/static/media/portfolio.29784847af3cc9bff8ab.png",
     "static/media/volunteer-matching.png": "/portfolio/static/media/volunteer-matching.8568ebd0e146c813ccbe.png",
+    "static/media/discord-bot.png": "/portfolio/static/media/discord-bot.e67b21a89ca46796cf80.png",
     "static/media/coog-zoo.png": "/portfolio/static/media/coog-zoo.6fe06472168b8c59634f.png",
     "static/media/recaptcha-game.png": "/portfolio/static/media/recaptcha-game.5a9d1cfebfac7074d2a3.png",
     "static/media/watt-watch.png": "/portfolio/static/media/watt-watch.1d06815b051bbef9a0a5.png",
     "index.html": "/portfolio/index.html",
-    "main.39cb1004.css.map": "/portfolio/static/css/main.39cb1004.css.map",
-    "main.a0203271.js.map": "/portfolio/static/js/main.a0203271.js.map",
+    "main.4518ff4c.css.map": "/portfolio/static/css/main.4518ff4c.css.map",
+    "main.de80c574.js.map": "/portfolio/static/js/main.de80c574.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39cb1004.css",
-    "static/js/main.a0203271.js"
+    "static/css/main.4518ff4c.css",
+    "static/js/main.de80c574.js"
   ]
 }
