@@ -93,11 +93,12 @@ const Header = () => {
             </button>
           )}
         </div>
-        <span className="header-tagline">Full Stack Developer | (832) 375-0825 | Computer Science Major | Mathematics Minor</span>
+        <span className="header-tagline">(832) 375-0825 | Computer Science Major | Mathematics Minor</span>
         <nav>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>

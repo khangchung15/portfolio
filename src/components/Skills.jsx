@@ -22,6 +22,17 @@ const techLinks = {
   'R': 'https://www.r-project.org/about.html',
   'UI': 'https://en.wikipedia.org/wiki/User_interface_design',
   'Data scraping': 'https://www.okta.com/identity-101/data-scraping/',
+  'BeautifulSoup': 'https://www.crummy.com/software/BeautifulSoup/bs4/doc/',
+  'GitHub Pages': 'https://docs.github.com/en/pages',
+  'Swiper.js': 'https://swiperjs.com/get-started',
+  'Jest': 'https://jestjs.io/docs/getting-started',
+  'Discord.py': 'https://discordpy.readthedocs.io/',
+  'FFmpeg': 'https://ffmpeg.org/documentation.html',
+  'yt-dlp': 'https://github.com/yt-dlp/yt-dlp',
+  'PyNaCl': 'https://pynacl.readthedocs.io/',
+  'aiohttp': 'https://docs.aiohttp.org/',
+  'yarl': 'https://yarl.readthedocs.io/',
+  'Lavalink': 'https://github.com/freyacodes/Lavalink'
 };
 
 const skills = [
@@ -144,6 +155,72 @@ const skills = [
     title: 'Data scraping',
     subtitle: 'Web Data Extraction',
     link: techLinks['Data scraping']
+  },
+  {
+    icon: '🍜',
+    title: 'BeautifulSoup',
+    subtitle: 'Web Scraping Library',
+    link: techLinks['BeautifulSoup']
+  },
+  {
+    icon: '📦',
+    title: 'GitHub Pages',
+    subtitle: 'Static Site Hosting',
+    link: techLinks['GitHub Pages']
+  },
+  {
+    icon: '🔄',
+    title: 'Swiper.js',
+    subtitle: 'Touch Slider Library',
+    link: techLinks['Swiper.js']
+  },
+  {
+    icon: '🧪',
+    title: 'Jest',
+    subtitle: 'JavaScript Testing',
+    link: techLinks['Jest']
+  },
+  {
+    icon: '🤖',
+    title: 'Discord.py',
+    subtitle: 'Discord Bot Framework',
+    link: techLinks['Discord.py']
+  },
+  {
+    icon: '🎵',
+    title: 'FFmpeg',
+    subtitle: 'Media Processing',
+    link: techLinks['FFmpeg']
+  },
+  {
+    icon: '📥',
+    title: 'yt-dlp',
+    subtitle: 'Video Downloader',
+    link: techLinks['yt-dlp']
+  },
+  {
+    icon: '🔐',
+    title: 'PyNaCl',
+    subtitle: 'Cryptography Library',
+    link: techLinks['PyNaCl']
+  },
+  {
+    icon: '🌐',
+    title: 'aiohttp',
+    subtitle: 'Async HTTP Client',
+    link: techLinks['aiohttp']
+  },
+  {
+    icon: '🔗',
+    title: 'yarl',
+    subtitle: 'URL Handling',
+    link: techLinks['yarl']
+  },
+  {
+    icon: '🎧',
+    title: 'Lavalink',
+    subtitle: 'Audio Streaming',
+    link: techLinks['Lavalink']
   }
 ];
 

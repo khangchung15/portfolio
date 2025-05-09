@@ -6,12 +6,14 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './Projects.css';
 import GradientButton from './GradientButton';
+import VideoModal from './VideoModal';
 import coogZooImage from '../assets/images/projects/coog-zoo.png';
 import volunteerMatchingImage from '../assets/images/projects/volunteer-matching.png';
 import wattWatchImage from '../assets/images/projects/watt-watch.png';
 import minecraftModImage from '../assets/images/projects/minecraft-mod.png';
 import portfolioImage from '../assets/images/projects/portfolio.png';
 import recaptchaGameImage from '../assets/images/projects/recaptcha-game.png';
+import discordImage from '../assets/images/projects/discord-bot.png';
 
 const techLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -34,9 +36,21 @@ const techLinks = {
   'GitHub Pages': 'https://docs.github.com/en/pages',
   'Node.js': 'https://nodejs.org/en/docs/',
   'HTML/CSS': 'https://developer.mozilla.org/en-US/docs/Web/HTML/CSS',
+  'Swiper.js': 'https://swiperjs.com/get-started',
+  'Jest': 'https://jestjs.io/docs/getting-started',
+  'Discord.py': 'https://discordpy.readthedocs.io/',
+  'FFmpeg': 'https://ffmpeg.org/documentation.html',
+  'yt-dlp': 'https://github.com/yt-dlp/yt-dlp',
+  'PyNaCl': 'https://pynacl.readthedocs.io/',
+  'aiohttp': 'https://docs.aiohttp.org/',
+  'yarl': 'https://yarl.readthedocs.io/',
+  'Lavalink': 'https://github.com/freyacodes/Lavalink'
 };
 
 const Projects = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [currentVideoUrl, setCurrentVideoUrl] = useState('');
+  
   const projects = [
     {
       title: 'Coog Zoo',
@@ -44,6 +58,7 @@ const Projects = () => {
       technologies: ['JavaScript', 'React', 'Vite', 'MySQL', 'HTML', 'CSS', 'Git'],
       github: 'https://github.com/khangchung15/finalcoogzoo',
       demo: null,
+      demoText: null,
       image: coogZooImage
     },
     {
@@ -52,6 +67,7 @@ const Projects = () => {
       technologies: ['Python', 'Django', 'React', 'HTML', 'CSS', 'JSON', 'PostgreSQL'],
       github: 'https://github.com/khangchung15/Volunteer-Matching',
       demo: null,
+      demoText: null,
       image: volunteerMatchingImage
     },
     {
@@ -60,6 +76,7 @@ const Projects = () => {
       technologies: ['Python', 'Flask', 'BeautifulSoup', 'JavaScript', 'HTML','CSS'],
       github: 'https://github.com/khangchung15/PowerGridHackathon',
       demo: null,
+      demoText: null,
       image: wattWatchImage
     },
     {
@@ -68,6 +85,8 @@ const Projects = () => {
       technologies: ['JSON', 'Java', 'Minecraft Forge API', 'Aseprite', 'IntelliJ'],
       github: 'https://github.com/khangchung15/minecraftmod',
       demo: null,
+      demoText: 'In Game Demo',
+      videoUrl: `${process.env.PUBLIC_URL}/videos/minecraft-demo.mp4`,
       image: minecraftModImage
     },
     {
@@ -76,15 +95,27 @@ const Projects = () => {
       technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages'],
       github: 'https://github.com/khangchung15/portfolio',
       demo: null,
+      demoText: null,
       image: portfolioImage
     },
     {
       title: 'ReCaptcha Game',
       description: 'A parody game of ReCaptcha, available to play on GitHub Pages, built with React.',
       technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages','Swiper.js', 'Jest'],
-      github: 'https://github.com/khangchung15/portfolio',
+      github: 'https://github.com/khangchung15/recaptcha-game',
       demo: 'https://khangchung15.github.io/recaptcha-game/',
+      demoText: 'Try it out',
       image: recaptchaGameImage
+    },
+    {
+      title: 'Discord Music Bot',
+      description: 'Discord music bot for ad-free music streaming, built with Python.',
+      technologies: ['Python', 'Discord.py', 'FFmpeg', 'yt-dlp', 'PyNaCl', 'aiohttp', 'yarl', 'Lavalink'],
+      github: 'https://github.com/khangchung15/discord-bot',
+      demo: null,
+      demoText: 'Setup & Demo',
+      videoUrl: `${process.env.PUBLIC_URL}/videos/discord-bot-demo.mp4`,
+      image: discordImage
     }
   ];
 
@@ -118,9 +149,21 @@ const Projects = () => {
 
   console.log('Image path:', projects[0].image);
 
+  const handleDemoClick = (project) => {
+    if (project.videoUrl) {
+      setCurrentVideoUrl(project.videoUrl);
+      setIsVideoModalOpen(true);
+    }
+  };
+
   return (
     <section id="projects" className="section">
       <h2>My Projects</h2>
+      <VideoModal 
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoUrl={currentVideoUrl}
+      />
       <div style={{ 
         opacity: isLoading ? 0 : 1, 
         transition: 'opacity 0.3s ease-in-out',
@@ -190,13 +233,20 @@ const Projects = () => {
                   >
                     GitHub
                   </GradientButton>
-                  {project.demo && (
+                  {project.demo && !project.videoUrl && (
                     <GradientButton 
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Try it out!
+                      {project.demoText || 'Try it out!'}
+                    </GradientButton>
+                  )}
+                  {project.videoUrl && (
+                    <GradientButton 
+                      onClick={() => handleDemoClick(project)}
+                    >
+                      {project.demoText}
                     </GradientButton>
                   )}
                 </div>

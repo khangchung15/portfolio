@@ -133,11 +133,9 @@ const About = () => {
       <h2>About Me</h2>
       <div className="about-content">
         <div className="about-text">
-          <p> Hello! I'm Khang Chung, Computer Science student at {uhLink}. 
-            I specialize in full stack development and love designing game.</p>
-          <p>
-            When I'm not coding, you can find me in the gym, walking in the park, or {pianoLink}!
-          </p>
+          <p> Hello! I'm Khang Chung, Computer Science student at {uhLink}. I specialize in full stack development and love designing game.</p>
+          <p> When I'm not coding, you can find me in the gym, walking in the park, or {pianoLink}!</p>
+          <p> I'm currently exploring Linux Mint and its potential to replace Windows as my daily driver.</p>
           <div className="resume-link">
           <GradientButton 
             href={`${process.env.PUBLIC_URL}/resume.pdf`}
