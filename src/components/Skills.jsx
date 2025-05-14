@@ -32,7 +32,15 @@ const techLinks = {
   'PyNaCl': 'https://pynacl.readthedocs.io/',
   'aiohttp': 'https://docs.aiohttp.org/',
   'yarl': 'https://yarl.readthedocs.io/',
-  'Lavalink': 'https://github.com/freyacodes/Lavalink'
+  'Lavalink': 'https://github.com/freyacodes/Lavalink',
+  'Linux': 'https://www.kernel.org/doc/html/latest/',
+  'Arch Linux': 'https://wiki.archlinux.org/',
+  'Hyprland': 'https://wiki.hyprland.org/',
+  'Waybar': 'https://github.com/Alexays/Waybar/wiki',
+  'Kitty': 'https://sw.kovidgoyal.net/kitty/',
+  'Rofi': 'https://github.com/davatorium/rofi/wiki',
+  'Shell': 'https://www.gnu.org/software/bash/manual/bash.html',
+  'UEFI': 'https://uefi.org/specifications'
 };
 
 const skills = [
@@ -51,7 +59,7 @@ const skills = [
   {
     icon: '☕',
     title: 'Java',
-    subtitle: 'Object-Oriented Programming Language',
+    subtitle: 'OOP Language',
     link: techLinks['Java']
   },
   {
@@ -221,6 +229,54 @@ const skills = [
     title: 'Lavalink',
     subtitle: 'Audio Streaming',
     link: techLinks['Lavalink']
+  },
+  {
+    icon: '🐧',
+    title: 'Linux',
+    subtitle: 'Operating System',
+    link: techLinks['Linux']
+  },
+  {
+    icon: '🏹',
+    title: 'Arch Linux',
+    subtitle: 'Linux Distribution',
+    link: techLinks['Arch Linux']
+  },
+  {
+    icon: '🪟',
+    title: 'Hyprland',
+    subtitle: 'Window Manager',
+    link: techLinks['Hyprland']
+  },
+  {
+    icon: '📊',
+    title: 'Waybar',
+    subtitle: 'Status Bar',
+    link: techLinks['Waybar']
+  },
+  {
+    icon: '🐱',
+    title: 'Kitty',
+    subtitle: 'Terminal Emulator',
+    link: techLinks['Kitty']
+  },
+  {
+    icon: '🔍',
+    title: 'Rofi',
+    subtitle: 'Application Launcher',
+    link: techLinks['Rofi']
+  },
+  {
+    icon: '💻',
+    title: 'Shell',
+    subtitle: 'Command Line Interface',
+    link: techLinks['Shell']
+  },
+  {
+    icon: '⚙️',
+    title: 'UEFI',
+    subtitle: 'Firmware Interface',
+    link: techLinks['UEFI']
   }
 ];
 

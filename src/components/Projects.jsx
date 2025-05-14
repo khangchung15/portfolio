@@ -14,6 +14,7 @@ import minecraftModImage from '../assets/images/projects/minecraft-mod.png';
 import portfolioImage from '../assets/images/projects/portfolio.png';
 import recaptchaGameImage from '../assets/images/projects/recaptcha-game.png';
 import discordImage from '../assets/images/projects/discord-bot.png';
+import linuxImage from '../assets/images/projects/linux.png';
 
 const techLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -44,7 +45,15 @@ const techLinks = {
   'PyNaCl': 'https://pynacl.readthedocs.io/',
   'aiohttp': 'https://docs.aiohttp.org/',
   'yarl': 'https://yarl.readthedocs.io/',
-  'Lavalink': 'https://github.com/freyacodes/Lavalink'
+  'Lavalink': 'https://github.com/freyacodes/Lavalink',
+  'Linux': 'https://www.kernel.org/doc/html/latest/',
+  'Arch Linux': 'https://wiki.archlinux.org/',
+  'Hyprland': 'https://wiki.hyprland.org/',
+  'Waybar': 'https://github.com/Alexays/Waybar/wiki',
+  'Kitty': 'https://sw.kovidgoyal.net/kitty/',
+  'Rofi': 'https://github.com/davatorium/rofi/wiki',
+  'Shell': 'https://www.gnu.org/software/bash/manual/bash.html',
+  'UEFI': 'https://uefi.org/specifications'
 };
 
 const Projects = () => {
@@ -116,6 +125,15 @@ const Projects = () => {
       demoText: 'Setup & Demo',
       videoUrl: `${process.env.PUBLIC_URL}/videos/discord-bot-demo.mp4`,
       image: discordImage
+    },
+    {
+      title: 'Arch Linux Ricing',
+      description: 'Customized Arch Linux with my own dotfiles using Hyprland & Waybar as Window Manager',
+      technologies: ['Linux', 'Arch Linux', 'Hyprland', 'Waybar', 'Kitty', 'Rofi', 'Shell', 'CSS', 'UEFI'],
+      github: 'https://github.com/khangchung15/dotfiles',
+      demo: null,
+      demoText: null,
+      image: linuxImage
     }
   ];
 
