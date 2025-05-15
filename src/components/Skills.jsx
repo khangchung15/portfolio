@@ -13,17 +13,14 @@ const techLinks = {
   'PostgreSQL': 'https://www.postgresql.org/docs/',
   'JSON': 'https://www.json.org/json-en.html',
   'Java': 'https://docs.oracle.com/en/java/',
+  'Minecraft Forge API': 'https://docs.minecraftforge.net/',
   'Aseprite': 'https://www.aseprite.org/',
+  'IntelliJ': 'https://www.jetbrains.com/help/idea/',
   'Flask': 'https://flask.palletsprojects.com/',
-  'Node.js': 'https://nodejs.org/en/docs/',
-  'HTML/CSS': 'https://developer.mozilla.org/en-US/docs/Web/HTML/CSS',
-  'Pixel Art': 'https://en.wikipedia.org/wiki/Pixel_art',
-  'C++': 'https://devdocs.io/cpp/',
-  'R': 'https://www.r-project.org/about.html',
-  'UI': 'https://en.wikipedia.org/wiki/User_interface_design',
-  'Data scraping': 'https://www.okta.com/identity-101/data-scraping/',
   'BeautifulSoup': 'https://www.crummy.com/software/BeautifulSoup/bs4/doc/',
   'GitHub Pages': 'https://docs.github.com/en/pages',
+  'Node.js': 'https://nodejs.org/en/docs/',
+  'HTML/CSS': 'https://developer.mozilla.org/en-US/docs/Web/HTML/CSS',
   'Swiper.js': 'https://swiperjs.com/get-started',
   'Jest': 'https://jestjs.io/docs/getting-started',
   'Discord.py': 'https://discordpy.readthedocs.io/',
@@ -40,7 +37,12 @@ const techLinks = {
   'Kitty': 'https://sw.kovidgoyal.net/kitty/',
   'Rofi': 'https://github.com/davatorium/rofi/wiki',
   'Shell': 'https://www.gnu.org/software/bash/manual/bash.html',
-  'UEFI': 'https://uefi.org/specifications'
+  'UEFI': 'https://uefi.org/specifications',
+  'Unity': 'https://docs.unity3d.com/',
+  'C#': 'https://learn.microsoft.com/en-us/dotnet/csharp/',
+  'Game Development': 'https://en.wikipedia.org/wiki/Video_game_development',
+  'Game Engine': 'https://www.arm.com/glossary/gaming-engines',
+  'Game Sprite': 'https://docs.unity3d.com/Manual/Sprites.html'
 };
 
 const skills = [
@@ -277,6 +279,36 @@ const skills = [
     title: 'UEFI',
     subtitle: 'Firmware Interface',
     link: techLinks['UEFI']
+  },
+  {
+    icon: '🎮',
+    title: 'Unity',
+    subtitle: 'Game Engine',
+    link: techLinks['Unity']
+  },
+  {
+    icon: '🔷',
+    title: 'C#',
+    subtitle: 'Game Programming',
+    link: techLinks['C#']
+  },
+  {
+    icon: '🎯',
+    title: 'Game Dev',
+    subtitle: 'Game Design & Creation',
+    link: techLinks['Game Development']
+  },
+  {
+    icon: '🖼️',
+    title: 'Game Sprite',
+    subtitle: '2D Game Assets',
+    link: techLinks['Game Sprite']
+  },
+  {
+    icon: '⚙️',
+    title: 'Game Engine',
+    subtitle: 'Game Developing Program',
+    link: techLinks['Game Engine']
   }
 ];
 

@@ -54,7 +54,12 @@ const techLinks = {
   'Kitty': 'https://sw.kovidgoyal.net/kitty/',
   'Rofi': 'https://github.com/davatorium/rofi/wiki',
   'Shell': 'https://www.gnu.org/software/bash/manual/bash.html',
-  'UEFI': 'https://uefi.org/specifications'
+  'UEFI': 'https://uefi.org/specifications',
+  'C#': 'https://learn.microsoft.com/en-us/dotnet/csharp/',
+  'Game Development': 'https://en.wikipedia.org/wiki/Video_game_development',
+  'Game Engine': 'https://www.arm.com/glossary/gaming-engines',
+  'Game Sprite': 'https://docs.unity3d.com/Manual/Sprites.html',
+  'Unity': 'https://unity.com/',
 };
 
 const Projects = () => {
