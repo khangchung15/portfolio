@@ -15,6 +15,7 @@ import portfolioImage from '../assets/images/projects/portfolio.png';
 import recaptchaGameImage from '../assets/images/projects/recaptcha-game.png';
 import discordImage from '../assets/images/projects/discord-bot.png';
 import linuxImage from '../assets/images/projects/linux.png';
+import solarSystemImage from '../assets/images/projects/solar-system.png';
 
 const techLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -99,6 +100,15 @@ const Projects = () => {
       image: minecraftModImage
     },
     {
+      title: 'Solar System',
+      description: 'An interactive 3D simulation of our solar system, built with Unity.',
+      technologies: ['Unity', 'C#', '3D Modeling', 'Game Development'],
+      github: 'https://khangchung15.itch.io/solar-system',
+      demo: `${process.env.PUBLIC_URL}/games/SolarSystemWindows.zip`,
+      demoText: 'Download for Windows',
+      image: `${process.env.PUBLIC_URL}/images/projects/solar-system.png`
+    },
+    {
       title: 'Personal Portfolio',
       description: 'This portfolio website you are seeing, built with React.',
       technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages'],
@@ -134,6 +144,15 @@ const Projects = () => {
       demo: null,
       demoText: null,
       image: linuxImage
+    },
+    {
+      title: 'Solar System',
+      description: 'Solar System with rotating planets and occasional comets, built with Unity Game Engine.',
+      technologies: ['Unity', 'C#', 'Game Sprite', 'Game Development', 'Game Engine'],
+      github: 'https://airplanecompany.itch.io/solar-system',
+      demo: `${process.env.PUBLIC_URL}/games/SolarSystemWindows.zip`,
+      demoText: 'Download Now',
+      image: solarSystemImage
     }
   ];
 
@@ -249,7 +268,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitHub
+                    {project.github && project.github.includes('itch.io') ? 'itch.io' : 'GitHub'}
                   </GradientButton>
                   {project.demo && !project.videoUrl && (
                     <GradientButton 

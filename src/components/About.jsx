@@ -138,7 +138,7 @@ const About = () => {
           <p> Former Linux Mint user turned Arch + Hyprland enthusiast. Now I spend more time ricing my desktop than actually using it.</p>
           <div className="resume-link">
           <GradientButton 
-            href={`${process.env.PUBLIC_URL}/newresume.pdf`}
+            href={`${process.env.PUBLIC_URL}/resume.pdf?v=${Date.now()}`}
             target="_blank"
             rel="noopener noreferrer"
           >
