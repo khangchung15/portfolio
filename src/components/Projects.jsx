@@ -100,15 +100,6 @@ const Projects = () => {
       image: minecraftModImage
     },
     {
-      title: 'Solar System',
-      description: 'An interactive 3D simulation of our solar system, built with Unity.',
-      technologies: ['Unity', 'C#', '3D Modeling', 'Game Development'],
-      github: 'https://khangchung15.itch.io/solar-system',
-      demo: `${process.env.PUBLIC_URL}/games/SolarSystemWindows.zip`,
-      demoText: 'Download for Windows',
-      image: `${process.env.PUBLIC_URL}/images/projects/solar-system.png`
-    },
-    {
       title: 'Personal Portfolio',
       description: 'This portfolio website you are seeing, built with React.',
       technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages'],
