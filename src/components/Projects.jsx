@@ -15,7 +15,7 @@ import portfolioImage from '../assets/images/projects/portfolio.png';
 import recaptchaGameImage from '../assets/images/projects/recaptcha-game.png';
 import discordImage from '../assets/images/projects/discord-bot.png';
 import linuxImage from '../assets/images/projects/linux.png';
-import solarSystemImage from '../assets/images/projects/solar-system.png';
+import cluelessImage from '../assets/images/projects/clueless.png';
 
 const techLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -55,11 +55,11 @@ const techLinks = {
   'Rofi': 'https://github.com/davatorium/rofi/wiki',
   'Shell': 'https://www.gnu.org/software/bash/manual/bash.html',
   'UEFI': 'https://uefi.org/specifications',
-  'C#': 'https://learn.microsoft.com/en-us/dotnet/csharp/',
-  'Game Development': 'https://en.wikipedia.org/wiki/Video_game_development',
-  'Game Engine': 'https://www.arm.com/glossary/gaming-engines',
-  'Game Sprite': 'https://docs.unity3d.com/Manual/Sprites.html',
-  'Unity': 'https://unity.com/',
+  'Svelte': 'https://svelte.dev/',
+  'TypeScript': 'https://www.typescriptlang.org/',
+  'Express': 'https://expressjs.com/',
+  'Ollama': 'https://ollama.ai/',
+  'Mistral': 'https://mistral.ai/',
 };
 
 const Projects = () => {
@@ -142,13 +142,13 @@ const Projects = () => {
       image: linuxImage
     },
     {
-      title: 'Solar System',
-      description: 'Solar System with rotating planets and occasional comets, built with Unity Game Engine.',
-      technologies: ['Unity', 'C#', 'Game Sprite', 'Game Development', 'Game Engine'],
-      github: 'https://airplanecompany.itch.io/solar-system',
-      demo: `${process.env.PUBLIC_URL}/games/SolarSystemWindows.zip`,
-      demoText: 'Download Now',
-      image: solarSystemImage
+      title: 'Clueless',
+      description: 'AI-powered word guessing game where users provide creative clues to help an AI guess words.',
+      technologies: ['Svelte', 'TypeScript', 'Vite', 'Node.js', 'Express', 'Ollama', 'Mistral'],
+      github: 'https://github.com/khangchung15/clueless',
+      demo: null,
+      demoText: null,
+      image: cluelessImage
     }
   ];
 
@@ -264,7 +264,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {project.github && project.github.includes('itch.io') ? 'itch.io' : 'GitHub'}
+                    GitHub
                   </GradientButton>
                   {project.demo && !project.videoUrl && (
                     <GradientButton 
