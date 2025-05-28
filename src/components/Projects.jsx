@@ -163,8 +163,8 @@ const Projects = () => {
       github: 'https://github.com/khangchung15/dotfiles',
       githubText: 'GitHub',
       demo: null,
-      demoText: null,
-      videoUrl: null,
+      demoText: 'Demo',
+      videoUrl: `${process.env.PUBLIC_URL}/videos/arch-linux-demo.mp4`,
       image: linuxImage
     },
     {
