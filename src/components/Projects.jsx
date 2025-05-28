@@ -164,6 +164,7 @@ const Projects = () => {
       githubText: 'GitHub',
       demo: null,
       demoText: null,
+      videoUrl: null,
       image: linuxImage
     },
     {
