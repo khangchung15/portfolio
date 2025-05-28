@@ -15,7 +15,9 @@ import portfolioImage from '../assets/images/projects/portfolio.png';
 import recaptchaGameImage from '../assets/images/projects/recaptcha-game.png';
 import discordImage from '../assets/images/projects/discord-bot.png';
 import linuxImage from '../assets/images/projects/linux.png';
+import solarSystemImage from '../assets/images/projects/solar-system.png';
 import cluelessImage from '../assets/images/projects/clueless.png';
+import spaceDefenderImage from '../assets/images/projects/space-defender.png';
 
 const techLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -60,6 +62,11 @@ const techLinks = {
   'Express': 'https://expressjs.com/',
   'Ollama': 'https://ollama.ai/',
   'Mistral': 'https://mistral.ai/',
+  'Unity': 'https://docs.unity3d.com/',
+  'C#': 'https://learn.microsoft.com/en-us/dotnet/csharp/',
+  'Game Sprite': 'https://docs.unity3d.com/Manual/Sprites.html',
+  'Game Development': 'https://docs.unity3d.com/Manual/UnityManual.html',
+  'Game Engine': 'https://docs.unity3d.com/Manual/UnityManual.html'
 };
 
 const Projects = () => {
@@ -69,36 +76,40 @@ const Projects = () => {
   const projects = [
     {
       title: 'Coog Zoo',
-      description: 'A web application for managing a zoo, built with React & MySQL.',
+      description: 'A web application for managing a zoo, built with React & MySQL',
       technologies: ['JavaScript', 'React', 'Vite', 'MySQL', 'HTML', 'CSS', 'Git'],
       github: 'https://github.com/khangchung15/finalcoogzoo',
+      githubText: 'GitHub',
       demo: null,
       demoText: null,
       image: coogZooImage
     },
     {
       title: 'Volunteer Matching System',
-      description: 'A system that connects volunteers with organizations, built with Django & PostgreSQL.',
+      description: 'A system that connects volunteers with organizations, built with Django & PostgreSQL',
       technologies: ['Python', 'Django', 'React', 'HTML', 'CSS', 'JSON', 'PostgreSQL'],
       github: 'https://github.com/khangchung15/Volunteer-Matching',
+      githubText: 'GitHub',
       demo: null,
       demoText: null,
       image: volunteerMatchingImage
     },
     {
       title: 'Watt Watch',
-      description: 'Real time data scraping with a warning system for areas under stress, built with Flask & JavaScript.',
+      description: 'Real time data scraping with a warning system for areas under stress, built with Flask & JavaScript',
       technologies: ['Python', 'Flask', 'BeautifulSoup', 'JavaScript', 'HTML','CSS'],
       github: 'https://github.com/khangchung15/PowerGridHackathon',
+      githubText: 'GitHub',
       demo: null,
       demoText: null,
       image: wattWatchImage
     },
     {
       title: 'Minecraft Mod',
-      description: 'New custom items & blocks + Various quality of life features to the Minecraft, built with Java & Minecraft Forge.',
+      description: 'New custom items & blocks + Various quality of life features to the Minecraft, built with Java & Minecraft Forge',
       technologies: ['JSON', 'Java', 'Minecraft Forge API', 'Aseprite', 'IntelliJ'],
       github: 'https://github.com/khangchung15/minecraftmod',
+      githubText: 'GitHub',
       demo: null,
       demoText: 'In Game Demo',
       videoUrl: `${process.env.PUBLIC_URL}/videos/minecraft-demo.mp4`,
@@ -106,50 +117,75 @@ const Projects = () => {
     },
     {
       title: 'Personal Portfolio',
-      description: 'This portfolio website you are seeing, built with React.',
+      description: 'This portfolio website you are seeing, built with React',
       technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages'],
       github: 'https://github.com/khangchung15/portfolio',
+      githubText: 'GitHub',
       demo: null,
       demoText: null,
       image: portfolioImage
     },
     {
       title: 'ReCaptcha Game',
-      description: 'A parody game of ReCaptcha, available to play on GitHub Pages, built with React.',
+      description: 'A parody game of ReCaptcha, available to play on GitHub Pages, built with React',
       technologies: ['React', 'HTML','CSS', 'JavaScript', 'GitHub Pages','Swiper.js', 'Jest'],
       github: 'https://github.com/khangchung15/recaptcha-game',
+      githubText: 'GitHub',
       demo: 'https://khangchung15.github.io/recaptcha-game/',
       demoText: 'Try it out',
       image: recaptchaGameImage
     },
     {
       title: 'Discord Music Bot',
-      description: 'Discord music bot for ad-free music streaming, built with Python.',
+      description: 'Discord music bot for ad-free music streaming, built with Python',
       technologies: ['Python', 'Discord.py', 'FFmpeg', 'yt-dlp', 'PyNaCl', 'aiohttp', 'yarl', 'Lavalink'],
       github: 'https://github.com/khangchung15/discord-bot',
+      githubText: 'GitHub',
       demo: null,
       demoText: 'Setup & Demo',
       videoUrl: `${process.env.PUBLIC_URL}/videos/discord-bot-demo.mp4`,
       image: discordImage
     },
     {
+      title: 'Solar System',
+      description: 'Solar System with rotating planets and occasional comets, built with Unity Game Engine',
+      technologies: ['Unity', 'C#', 'Game Sprite', 'Game Development', 'Game Engine'],
+      github: 'https://airplanecompany.itch.io/solar-system',
+      githubText: 'Itch.io',
+      demo: `${process.env.PUBLIC_URL}/games/SolarSystemWindows.zip`,
+      demoText: 'Windows Download',
+      image: solarSystemImage
+    },
+    {
       title: 'Arch Linux Ricing',
       description: 'Customized Arch Linux with my own dotfiles using Hyprland & Waybar as Window Manager',
       technologies: ['Linux', 'Arch Linux', 'Hyprland', 'Waybar', 'Kitty', 'Rofi', 'Shell', 'CSS', 'UEFI'],
       github: 'https://github.com/khangchung15/dotfiles',
+      githubText: 'GitHub',
       demo: null,
       demoText: null,
       image: linuxImage
     },
     {
       title: 'Clueless',
-      description: 'AI-powered word guessing game where users provide creative clues to help an AI guess words.',
+      description: 'AI-powered word guessing game where users provide creative clues to help an AI guess words',
       technologies: ['Svelte', 'TypeScript', 'Vite', 'Node.js', 'Express', 'Ollama', 'Mistral'],
       github: 'https://github.com/khangchung15/clueless',
+      githubText: 'GitHub',
       demo: null,
       demoText: null,
       image: cluelessImage
-    }
+    },
+    {
+      title: 'Space Defender',
+      description: '2D Shooter Game with enemies chasing & shooting at the player, built with Unity Game Engine',
+      technologies: ['Unity', 'C#', 'Game Sprite', 'Game Development', 'Game Engine'],
+      github: 'https://airplanecompany.itch.io/space-defender',
+      githubText: 'Try on Itch.io',
+      demo: `${process.env.PUBLIC_URL}/games/WindowsSpaceDefender.zip`,
+      demoText: 'Windows Download',
+      image: spaceDefenderImage
+    },
   ];
 
   const swiperRef = useRef();
@@ -264,7 +300,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitHub
+                    {project.githubText}
                   </GradientButton>
                   {project.demo && !project.videoUrl && (
                     <GradientButton 

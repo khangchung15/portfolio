@@ -41,7 +41,12 @@ const techLinks = {
   'Kitty': 'https://sw.kovidgoyal.net/kitty/',
   'Rofi': 'https://github.com/davatorium/rofi/wiki',
   'Shell': 'https://www.gnu.org/software/bash/manual/bash.html',
-  'UEFI': 'https://uefi.org/specifications'
+  'UEFI': 'https://uefi.org/specifications',
+  'Unity': 'https://docs.unity3d.com/',
+  'C#': 'https://learn.microsoft.com/en-us/dotnet/csharp/',
+  'Game Sprite': 'https://docs.unity3d.com/Manual/Sprites.html',
+  'Game Development': 'https://docs.unity3d.com/Manual/UnityManual.html',
+  'Game Engine': 'https://docs.unity3d.com/Manual/UnityManual.html'
 };
 
 const skillCategories = [
@@ -72,7 +77,8 @@ const skillCategories = [
       { icon: '☕', title: 'Java', subtitle: 'OOP Language', link: techLinks['Java'] },
       { icon: '🐍', title: 'Python', subtitle: 'General Purpose Language', link: techLinks['Python'] },
       { icon: '💻', title: 'C++', subtitle: 'Systems Programming', link: techLinks['C++'] },
-      { icon: '📊', title: 'R', subtitle: 'Statistical Computing', link: techLinks['R'] }
+      { icon: '📊', title: 'R', subtitle: 'Statistical Computing', link: techLinks['R'] },
+      { icon: '🔷', title: 'C#', subtitle: 'Game Development Language', link: techLinks['C#'] }
     ]
   },
   {
@@ -128,6 +134,14 @@ const skillCategories = [
       { icon: '🐱', title: 'Kitty', subtitle: 'Terminal Emulator', link: techLinks['Kitty'] },
       { icon: '🔍', title: 'Rofi', subtitle: 'Application Launcher', link: techLinks['Rofi'] }
     ]
+  },
+  {
+    category: "Game Development",
+    items: [
+      { icon: '🎮', title: 'Unity', subtitle: 'Game Engine', link: techLinks['Unity'] },
+      { icon: '🎯', title: 'Game Dev', subtitle: 'Game Design', link: techLinks['Game Development'] },
+      { icon: '🖼️', title: 'Game Sprite', subtitle: '2D & 3D Sprites', link: techLinks['Game Sprite'] }
+    ]
   }
 ];
 
@@ -142,10 +156,10 @@ const Skills = () => {
   };
 
   const toggleAll = () => {
-    const allExpanded = Object.values(expandedCategories).every(value => value);
+    const anyExpanded = Object.values(expandedCategories).some(value => value);
     const newState = {};
     skillCategories.forEach(category => {
-      newState[category.category] = !allExpanded;
+      newState[category.category] = !anyExpanded;
     });
     setExpandedCategories(newState);
   };
@@ -158,7 +172,7 @@ const Skills = () => {
           className="toggle-all-btn"
           onClick={toggleAll}
         >
-          {Object.values(expandedCategories).every(value => value) ? 'Collapse All' : 'Expand All'}
+          {Object.values(expandedCategories).some(value => value) ? 'Collapse All' : 'Expand All'}
         </button>
       </div>
       <div className="skills-categories">
