@@ -7,9 +7,14 @@ const Certifications = () => {
       title: "Google AI Essentials",
       date: "April 2025",
       link: "https://www.coursera.org/account/accomplishments/verify/MM5AMN653P89",
-      issuer: "Coursera"
+      issuer: "Google"
     },
-    // Add more certifications here
+    {
+      title: "Game Design & Development: 2D Shooter",
+      date: "June 2025",
+      link: "https://www.coursera.org/account/accomplishments/verify/3D29WE5L2B1G",
+      issuer: "Michigan State University"
+    },
   ];
 
   return (
