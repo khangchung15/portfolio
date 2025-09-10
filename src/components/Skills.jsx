@@ -26,7 +26,6 @@ const techLinks = {
   'BeautifulSoup': 'https://www.crummy.com/software/BeautifulSoup/bs4/doc/',
   'GitHub Pages': 'https://docs.github.com/en/pages',
   'Swiper.js': 'https://swiperjs.com/get-started',
-  'Jest': 'https://jestjs.io/docs/getting-started',
   'Discord.py': 'https://discordpy.readthedocs.io/',
   'FFmpeg': 'https://ffmpeg.org/documentation.html',
   'yt-dlp': 'https://github.com/yt-dlp/yt-dlp',
@@ -46,7 +45,11 @@ const techLinks = {
   'C#': 'https://learn.microsoft.com/en-us/dotnet/csharp/',
   'Game Sprite': 'https://docs.unity3d.com/Manual/Sprites.html',
   'Game Development': 'https://docs.unity3d.com/Manual/UnityManual.html',
-  'Game Engine': 'https://docs.unity3d.com/Manual/UnityManual.html'
+  'Game Engine': 'https://docs.unity3d.com/Manual/UnityManual.html',
+  'Rust': 'https://doc.rust-lang.org/book/',
+  'SSH': 'https://www.ssh.com/academy/ssh',
+  'OpenSSH': 'https://www.openssh.com/',
+  'OverTheWire': 'https://overthewire.org/wargames/'
 };
 
 const skillCategories = [
@@ -78,7 +81,8 @@ const skillCategories = [
       { icon: '🐍', title: 'Python', subtitle: 'General Purpose Language', link: techLinks['Python'] },
       { icon: '💻', title: 'C++', subtitle: 'Systems Programming', link: techLinks['C++'] },
       { icon: '📊', title: 'R', subtitle: 'Statistical Computing', link: techLinks['R'] },
-      { icon: '🔷', title: 'C#', subtitle: 'Game Development Language', link: techLinks['C#'] }
+      { icon: '🔷', title: 'C#', subtitle: 'Game Development Language', link: techLinks['C#'] },
+      { icon: '🦀', title: 'Rust', subtitle: 'Memory-Safe Systems Language', link: techLinks['Rust'] }
     ]
   },
   {
@@ -111,12 +115,6 @@ const skillCategories = [
     ]
   },
   {
-    category: "Testing",
-    items: [
-      { icon: '🧪', title: 'Jest', subtitle: 'JavaScript Testing Framework', link: techLinks['Jest'] }
-    ]
-  },
-  {
     category: "Multimedia & Bots",
     items: [
       { icon: '🤖', title: 'Discord.py', subtitle: 'Discord Bot Framework', link: techLinks['Discord.py'] },
@@ -142,7 +140,15 @@ const skillCategories = [
       { icon: '🎯', title: 'Game Dev', subtitle: 'Game Design', link: techLinks['Game Development'] },
       { icon: '🖼️', title: 'Game Sprite', subtitle: '2D & 3D Sprites', link: techLinks['Game Sprite'] }
     ]
-  }
+  },
+  {
+  category: "Security & Systems Proficiency",
+  items: [
+    { icon: '🔑', title: 'SSH', subtitle: 'Secure Shell Protocol', link: techLinks['SSH'] },
+    { icon: '🪪', title: 'OpenSSH', subtitle: 'SSH Implementation & Tools', link: techLinks['OpenSSH'] },
+    { icon: '🦹', title: 'OverTheWire', subtitle: 'Linux & Web Security Wargame', link: techLinks['OverTheWire'] },
+  ]
+  },
 ];
 
 const Skills = () => {
